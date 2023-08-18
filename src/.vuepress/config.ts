@@ -1,8 +1,8 @@
-import { defineUserConfig } from "vuepress";
+import {defineUserConfig} from "vuepress";
 import theme from "./theme.js";
-import { searchPlugin } from "@vuepress/plugin-search";
-import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
-import { getDirname, path } from "@vuepress/utils";
+import {searchPlugin} from "@vuepress/plugin-search";
+import {registerComponentsPlugin} from "@vuepress/plugin-register-components";
+import {getDirname, path} from "@vuepress/utils";
 
 export default defineUserConfig({
   base: "/",
@@ -14,9 +14,9 @@ export default defineUserConfig({
   theme,
   plugins: [
     // 注册全局组件的插件
-    // registerComponentsPlugin({
-    //   componentsDir: path.resolve(__dirname, "./components"),
-    // }),
+    registerComponentsPlugin({
+      componentsDir: path.resolve(__dirname, "./components"),
+    }),
     // 搜索插件
     searchPlugin({
       //多语言支持

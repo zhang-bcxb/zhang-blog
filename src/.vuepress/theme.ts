@@ -115,5 +115,7 @@ export default hopeTheme({
     git: true,
     // 关闭sitemap插件
     sitemap: false,
+    // 打开博客功能
+    blog: true
   },
 });
