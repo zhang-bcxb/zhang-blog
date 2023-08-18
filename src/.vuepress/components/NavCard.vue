@@ -83,7 +83,7 @@ export default {
 
 .el-card:hover {
   /* transform: scale(1.03); */
-  boder-top: none;
+  border-top: none;
   background-color: #FDF853;
 }
 </style>

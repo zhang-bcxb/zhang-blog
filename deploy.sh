@@ -16,7 +16,14 @@ git init
 git add -A
 git commit -m 'deploy'
 
-# 如果发布到 https://<USERNAME>.github.io/<REPO>
+# 发布到 gh-pages 分支
 git push -f git@github.com:zhang-bcxb/zhang-blog.git master:gh-pages
+
+# 回到项目根路径
+cd ../../../
+git add .
+git commit -m 'update docs'
+# 发布到 master 分支
+git push -f git@github.com:zhang-bcxb/zhang-blog.git master
 
 cd -
