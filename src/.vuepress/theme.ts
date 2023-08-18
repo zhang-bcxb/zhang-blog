@@ -1,4 +1,4 @@
-import { hopeTheme } from "vuepress-theme-hope";
+import {hopeTheme} from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
@@ -27,8 +27,28 @@ export default hopeTheme({
   sidebar,
 
   footer: "编程细胞の学习笔记",
-
   displayFooter: true,
+
+  // 页面显示信息
+  pageInfo: ["Category", "Tag", "ReadingTime"],
+
+  // 路径导航
+  breadcrumb: true,
+  // 路径导航的图标显示
+  breadcrumbIcon: true,
+
+  // 是否可以选中颜色
+  themeColor: true,
+  // 是否在桌面模式下显示打印按钮
+  print: true,
+  // 暗黑模式切换-在深色模式和浅色模式中切换
+  darkmode: "toggle",
+  // 全屏按钮
+  fullscreen: true,
+  // 返回顶部按钮-下滑300px后显示
+  backToTop: true,
+  // 纯净模式-禁用
+  pure: false,
 
   // 页面配置信息
   metaLocales: {
@@ -40,7 +60,7 @@ export default hopeTheme({
     // 头像
     avatar: "/logo.png",
     // 名称
-    name: "Mr.Tong",
+    name: "zhang-bcxb",
     // 是否是圆形头像
     roundAvatar: false,
     // 个人描述
@@ -56,14 +76,6 @@ export default hopeTheme({
     timeline: "编程细胞の时光轴🍃",
   },
   plugins: {
-    // // You should generate and use your own comment service
-    // comment: {
-    //   provider: "Giscus",
-    //   repo: "vuepress-theme-hope/giscus-discussions",
-    //   repoId: "R_kgDOG_Pt2A",
-    //   category: "Announcements",
-    //   categoryId: "DIC_kwDOG_Pt2M4COD69",
-    // },
     // 代码复制功能-vuepress-plugin-copy-code2
     copyCode: {
       // 在移动端也可以实现复制代码
@@ -95,11 +107,11 @@ export default hopeTheme({
       stylize: [
         {
           matcher: "Recommended",
-          replacer: ({ tag }) => {
+          replacer: ({tag}) => {
             if (tag === "em")
               return {
                 tag: "Badge",
-                attrs: { type: "tip" },
+                attrs: {type: "tip"},
                 content: "Recommended",
               };
           },
@@ -108,7 +120,7 @@ export default hopeTheme({
       sub: true,
       sup: true,
       tabs: true,
-      vPre: true,
+      // vPre: true,
       vuePlayground: true,
     },
     // 开启git实现编辑此页面-最后更新时间-贡献者功能
